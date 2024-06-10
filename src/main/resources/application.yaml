@@ -2,12 +2,12 @@ server:
     port: 8080
 
 spring:
-  datasource:
-    url: jdbc:postgresql://dpg-cpj5enuct0pc738494vg-a.oregon-postgres.render.com:5432/cyberhunter_8guf
-    username: cyberhunter_8guf_user
-    password: fvXa9Pg1kfCGn8FtRVCsn9bRW33FPjw7
-    driver-class-name: org.postgresql.Driver
-    initialize: true
+    datasource:
+        url: jdbc:postgresql://dpg-cpfo7af109ks73bo7o1g-a.oregon-postgres.render.com/mateusmarina
+        username: mateusmarina_user
+        password: BcEL8eAr4AzWlpveSJAvKG9lfexs5hwK
+        driver-class-name: org.postgresql.Driver
+        initialize: true
 
     jpa: 
         hibernate:

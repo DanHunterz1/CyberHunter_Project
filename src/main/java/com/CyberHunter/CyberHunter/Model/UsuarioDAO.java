@@ -24,7 +24,7 @@ public class UsuarioDAO {
 	}
 	
 	public void inserirUsuario(Usuario usuario) {
-		String sql = "INSERT INTO usuarios (nome,sobren,email)" +
+		String sql = "INSERT INTO usuarios1 (nome,sobren,email)" +
 	                 " VALUES (?,?,?)";
 		Object[] obj = new Object[3];
 		//primeiro ?
@@ -37,20 +37,20 @@ public class UsuarioDAO {
 	}
 
     public List<Map<String, Object>> listarUsuario() {
-    	String sql = "SELECT * FROM usuarios";
+    	String sql = "SELECT * FROM usuarios1";
     	return jdbc.queryForList(sql);
     }
 
 	//Lista de 1
 	public List<Map<String,Object>> obterUsuario(int id){
-		String sql = "SELECT * FROM usuarios where id = ?";
+		String sql = "SELECT * FROM usuarios1 where id = ?";
 		Object[] obj = new Object[1];
 		obj[0] = id;
 		return jdbc.queryForList(sql, obj);
 	}
 
 	public void atualizarUsuario(int id, Usuario usuario) {
-        String sql = "UPDATE usuarios SET nome = ?, sobren = ?, email = ? WHERE id = ?";
+        String sql = "UPDATE usuarios1 SET nome = ?, sobren = ?, email = ? WHERE id = ?";
         Object[] obj = new Object[4];
 		//primeiro ?
 		obj[0] = usuario.getNome();
@@ -64,7 +64,7 @@ public class UsuarioDAO {
     }
 
 	public void apagarUsuario(int id){
-		String sql = "DELETE FROM usuarios WHERE id = ?";
+		String sql = "DELETE FROM usuarios1 WHERE id = ?";
 		Object[] obj = new Object[1];
 		obj[0] = id;
 		jdbc.update(sql, obj);
