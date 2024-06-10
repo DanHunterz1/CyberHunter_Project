@@ -4,4 +4,3 @@ CREATE TABLE IF NOT EXISTS usuarios (
      sobren   varchar(50),
      email    varchar(30)
 );
-DROP TABLE IF EXISTS usuarios;
